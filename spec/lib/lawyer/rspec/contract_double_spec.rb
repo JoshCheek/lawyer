@@ -1,6 +1,7 @@
 require 'lawyer/rspec'
 
-class DoublableContract < Lawyer::Contract
+class DoublableContract
+  extend Lawyer::Contract
   confirm :ping
   confirm :arity => 2
   confirm :named => [:arg, :arg2]

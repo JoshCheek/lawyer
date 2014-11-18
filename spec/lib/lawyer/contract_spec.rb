@@ -1,10 +1,12 @@
-class TestContract < Lawyer::Contract
+class TestContract
+  extend Lawyer::Contract
   confirm :ping
   confirm :pong => 2
   confirm :pung => [:name, :size]
 end
 
-class TestInitialize < Lawyer::Contract
+class TestInitialize
+  extend Lawyer::Contract
   confirm :initialize => [:arg]
 end
 

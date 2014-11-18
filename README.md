@@ -10,7 +10,8 @@ Lawyer allows you to create contracts that specify how an object behaves.
 ```rb
 require 'lawyer'
 
-class Pingable < Lawyer::Contract
+class Pingable
+  extend Lawyer::Contract
   confirm :ping
 end
 ```
@@ -100,7 +101,8 @@ First up, create a contract that specifies the methods available in an interface
 require 'lawyer'
 
 module Contracts
-  class Person < Lawyer::Contract
+  class Person
+    extend Lawyer::Contract
     confirm :name                               # check that the method exists
     confirm :name= => 1                         # check the method arity
     confirm :rename => [:firstname, :lastname]  # check required named parameters (ruby 2.1 only)

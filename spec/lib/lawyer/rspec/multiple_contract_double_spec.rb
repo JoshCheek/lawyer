@@ -1,10 +1,12 @@
 require 'lawyer/rspec'
 
-class FirstContract < Lawyer::Contract
+class FirstContract
+  extend Lawyer::Contract
   confirm :ping
 end
 
-class SecondContract < Lawyer::Contract
+class SecondContract
+  extend Lawyer::Contract
   confirm :pong
 end
 
